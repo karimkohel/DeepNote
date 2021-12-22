@@ -6,7 +6,7 @@ import threading
 
 import librosa
 import numpy as np
-import tensorflow as tf
+import tensorflow.compact.v1 as tf
 
 FILE_PATTERN = r'p([0-9]+)_([0-9]+)\.wav'
 
