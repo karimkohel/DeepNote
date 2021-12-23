@@ -2,4 +2,4 @@
 python train.py --data_dir=techno --logdir_root=logging
 
 -- (logdir, sample, model.ckpt)
-python generate.py --wav_out_path=generated.wav --logdir=logging --samples 16000 logging/train/2021-12-23T02-22-52/model.ckpt-15
+python generate.py --wav_out_path=generated.wav --logdir=logging --samples 32000 logging/train/2021-12-23T02-22-52/model.ckpt-15
