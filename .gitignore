@@ -1,6 +1,8 @@
 # Custom ignores
 techno
 .vscode
+logging
+*.wav
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
