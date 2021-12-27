@@ -1,7 +1,7 @@
 # Custom ignores
-techno
+techno*
 .vscode
-logging
+logging*
 *.wav
 
 # Byte-compiled / optimized / DLL files

@@ -8,7 +8,7 @@ Data will consist mainly of techno music segments that has no quite gaps between
 
 ### Running the network for now
  - Training:
- `python train.py --data_dir=techno --logdir_root=logging`
+ `python train.py --data_dir=techno --logdir=logging/train/2021-12-26T15-27-51 --checkpoint_every=1000`
  - Generating
  `python generate.py --wav_out_path=generated.wav --logdir=logging --samples 32000 logging/train/2021-12-23T02-22-52/model.ckpt-15`
 
