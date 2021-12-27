@@ -19,7 +19,7 @@ Data was segmented into varying length files of musical segments in wav format.
 ### Dependencies 
  - tensorflow-gpu==1.15.0
  - librosa==0.5
- - cudatoolkit==10
+ - cudatoolkit==10.0.130
  - cudnn==7.6.5
 
 ### NOTES
