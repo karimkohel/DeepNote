@@ -29,8 +29,13 @@ Data was segmented into varying length files of musical segments in wav format.
  - using free mp3 cutter the music where cut into the specific segments and turned into wav format
  - working with ibab implimentation was hard as tf1 is not working unless you change the requirements.txt
  - installing gpu drivers was a nightmare
- - changing the code that uses tensorflow to referenece tensorflow version 1 compatability
- - collecting data: 1 GB of data mark
+ - changing the code that uses tensorflow to reference tensorflow version 1 compatibility
+
+ - collecting data: 1 Hour of music mark
    - music files were ripped off of youtube as mp3 files 
    - preprocessed on audacity to trim the wanted segments from audio files and convert files to wav
-   - each music file can be used to collect up to 3 or 4 music segments as different wav files 
+   - each music file can be used to collect up to 3 or 4 music segments as different wav files
+   - Results:
+        - after 42k steps generating a 5 sec segment produced an accurate sounding drum set accompanied by some incoherent bass sounds with a noticeable level of noise all over the palce
+        - after 70k steps generating a 5 sec segment produced a dominant hissing sound with continous snares and noise all over the place with underling bass which was way worse than the 42k mark
+
