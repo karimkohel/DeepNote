@@ -5,6 +5,7 @@ import argparse
 from datetime import datetime
 import json
 import os
+from types import SimpleNamespace
 
 import librosa
 import numpy as np
@@ -132,8 +133,8 @@ def create_seed(filename,
     return quantized[:cut_index]
 
 
-def main():
-    args = get_arguments()
+def main(argsDict):
+    args = SimpleNamespace(**argsDict)
     started_datestring = "{0:%Y-%m-%dT%H-%M-%S}".format(datetime.now())
     logdir = os.path.join(args.logdir, 'generate', started_datestring)
     with open(args.wavenet_params, 'r') as config_file:
