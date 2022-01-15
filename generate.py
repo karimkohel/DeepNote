@@ -277,4 +277,19 @@ def main(argsDict):
 
 
 if __name__ == '__main__':
-    main()
+    args = {
+        "wav_out_path": 'generated.wav',
+        "logdir": 'logging',
+        "samples": 16000,
+        "checkpoint": 'logging/train_new/model.ckpt-100000',
+        "temperature": 1.0,
+        "wavenet_params": './wavenet_params.json',
+        "silence_threshold": 0.1,
+        "gc_cardinality": None,
+        "gc_channels": None,
+        "fast_generation": True, # TODO : must test when false
+        "gc_id": None,
+        "wav_seed": None,
+        "save_every": None
+    }
+    main(args)
