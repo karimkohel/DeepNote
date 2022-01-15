@@ -10,14 +10,11 @@
     <br>
     <form action="generating" method="post">
         {% for message in get_flashed_messages() %}
-             <p>{{ message }}</p>
-         {% endfor %}
-        <br>
-        <input type="text" name="name_input">
-        <input type="int" name= "min_input">
-        <br>
-        <input type="submit" value="Generating" id="greet">
-        <>
+        <p>{{ message }}</p>
+        {% endfor %}
+        <form action="hello" method="post">
+            <input type="submit" value="Generate anther one?">
+        </form>
     </form>
 </body>
 </html>
