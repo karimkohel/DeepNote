@@ -140,7 +140,7 @@ def main(argsDict):
     with open(args.wavenet_params, 'r') as config_file:
         wavenet_params = json.load(config_file)
 
-    sess = tf.Session()
+    sess = tf.compat.v1.Session()
 
     net = WaveNetModel(
         batch_size=1,
@@ -277,6 +277,7 @@ def main(argsDict):
 
 
 if __name__ == '__main__':
+    print("THIS IS A SANITY CHECK TO GENERATE ONE SECOND OF AUDIO FROM SPECIFIC MODEL")
     args = {
         "wav_out_path": 'generated.wav',
         "logdir": 'logging',
