@@ -8,7 +8,11 @@
 <body>
     <img src="https://github.com/karimkohel/DeepNote/blob/main/music.png?raw=true">
     <br>
-    <p>your piece is being generated and will be added to the hall of fame shortly, </p>
-    <a href="http://127.0.0.1:5000/main-hall">check out the hall of fame</a>
+    {% for wav in wavs%}
+        <audio controls>
+            <source src="{{ wav }}">
+        </audio>
+        <br>
+    {% endfor %}
 </body>
 </html>

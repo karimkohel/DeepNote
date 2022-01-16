@@ -9,15 +9,13 @@
     <img src="https://github.com/karimkohel/DeepNote/blob/main/music.png?raw=true">
     <br>
     <form action="generating" method="post">
-        {% for message in get_flashed_messages() %}
-             <p>{{ message }}</p>
-         {% endfor %}
+        <p>what name do you want your song to be?</p>
+        <p>how many seconds to you want it to be (max 5)</p>
         <br>
         <input type="text" name="name_input">
         <input type="int" name= "min_input">
         <br>
         <input type="submit" value="Generating" id="greet">
-        <>
     </form>
 </body>
 </html>

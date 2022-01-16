@@ -1,12 +1,18 @@
 body {
     text-align: center;
-    background-color: black;
+    background-color: rgb(11, 14, 39);
 }
 p {
     color: white;
     font-family: Shanti;
     font-size: 1.2em;
     display: inline-block;
+    margin:  20px;
+}
+ul {
+    color: white;
+    font-family: Shanti;
+    font-size: 1.2em;
     margin:  20px;
 }
 img {
