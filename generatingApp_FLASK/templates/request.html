@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DeepNote</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <img src="https://github.com/karimkohel/DeepNote/blob/main/music.png?raw=true">
+    <br>
+    <form action="generating" method="post">
+        {% for message in get_flashed_messages() %}
+        <p>{{ message }}</p>
+        {% endfor %}
+        <form action="hello" method="post">
+            <input type="submit" value="Generate anther one?">
+        </form>
+    </form>
+</body>
+</html>
