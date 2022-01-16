@@ -6,11 +6,13 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 <body>
-    <img src="https://github.com/karimkohel/DeepNote/blob/main/music.png?raw=true">
+    <img src="{{ url_for('static', filename='music.png') }}">
+    <h3>if your generated file is not here please wait for it to be generated and refresh the page once in a while to check if it is done</h3>
     <br>
     {% for wav in wavs%}
+        <h3>{{ wav["name"] }}</h3>
         <audio controls>
-            <source src="{{ wav }}">
+            <source src="/static/{{ wav['path'] }}" type="audio/mpeg">
         </audio>
         <br>
     {% endfor %}
