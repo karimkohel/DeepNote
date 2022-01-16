@@ -7,13 +7,14 @@
 </head>
 <body>
     <img src="{{ url_for('static', filename='music.png') }}">
-    <h3>if your generated file is not here please wait for it to be generated and refresh the page once in a while to check if it is done</h3>
+    <h2>if your generated file is not here please wait for it to be generated and refresh the page once in a while to check if it is done</h2>
     <br>
     {% for wav in wavs%}
         <h3>{{ wav["name"] }}</h3>
         <audio controls>
-            <source src="/static/{{ wav['path'] }}" type="audio/mpeg">
+            <source src="/static/generated/{{ wav['path'] }}" type="audio/mpeg">
         </audio>
+        <br>
         <br>
     {% endfor %}
 </body>

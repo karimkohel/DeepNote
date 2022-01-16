@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 <body>
-    <img src="https://github.com/karimkohel/DeepNote/blob/main/music.png?raw=true">
+    <img src="{{ url_for('static', filename='music.png') }}">
     <br>
     <form action="generating" method="post">
         <p>what name do you want your song to be?</p>

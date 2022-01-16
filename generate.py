@@ -133,8 +133,23 @@ def create_seed(filename,
     return quantized[:cut_index]
 
 
-def main(argsDict):
-    args = SimpleNamespace(**argsDict)
+def main(name, time):
+    args = {
+        "wav_out_path": name,
+        "logdir": 'logging',
+        "samples": time*16000,
+        "checkpoint": 'logging/train_new/model.ckpt-100000',
+        "temperature": 1.0,
+        "wavenet_params": './wavenet_params.json',
+        "silence_threshold": 0.1,
+        "gc_cardinality": None,
+        "gc_channels": None,
+        "fast_generation": True, # TODO : must test when false
+        "gc_id": None,
+        "wav_seed": None,
+        "save_every": None
+    }
+    args = SimpleNamespace(**args)
     started_datestring = "{0:%Y-%m-%dT%H-%M-%S}".format(datetime.now())
     logdir = os.path.join(args.logdir, 'generate', started_datestring)
     with open(args.wavenet_params, 'r') as config_file:
@@ -278,19 +293,4 @@ def main(argsDict):
 
 if __name__ == '__main__':
     print("THIS IS A SANITY CHECK TO GENERATE ONE SECOND OF AUDIO FROM SPECIFIC MODEL")
-    args = {
-        "wav_out_path": 'generated.wav',
-        "logdir": 'logging',
-        "samples": 16000,
-        "checkpoint": 'logging/train_new/model.ckpt-100000',
-        "temperature": 1.0,
-        "wavenet_params": './wavenet_params.json',
-        "silence_threshold": 0.1,
-        "gc_cardinality": None,
-        "gc_channels": None,
-        "fast_generation": True, # TODO : must test when false
-        "gc_id": None,
-        "wav_seed": None,
-        "save_every": None
-    }
-    main(args)
+    main('generated.wav', 1)
