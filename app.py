@@ -18,6 +18,8 @@ def greeter():
 	name = str(request.form['name_input'])
 	name = 'static/generated/'+name + '.wav'
 	time = int(request.form['min_input'])
+	if time > 5:
+		time = 5
 	t = Thread(target=model_generate, args=(name, time))
 	t.start()
 	return render_template("request.html", name=name)
