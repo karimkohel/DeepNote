@@ -11,7 +11,7 @@ Data was segmented into varying length files of musical segments in wav format.
 
 ### Running the network for now
  - Training:
- `python train.py --data_dir=techno --logdir=logging/train/2021-12-26T15-27-51 --checkpoint_every=1000`
+ `python train.py --data_dir=techno --logdir=logging/6HourDataTrainModels --checkpoint_every=10000 --max_checkpoints=15`
  - Generating
  `python generate.py --wav_out_path=generated.wav --logdir=logging --samples 32000 logging/train/2021-12-23T02-22-52/model.ckpt-15`
 
