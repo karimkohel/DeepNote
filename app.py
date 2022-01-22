@@ -22,7 +22,7 @@ def greeter():
 		time = 5
 	t = Thread(target=model_generate, args=(name, time))
 	t.start()
-	return render_template("request.html", name=name)
+	return render_template("generating.html", name=name)
 
 @app.route("/main-hall", methods=['POST', 'GET'])
 def fame():
