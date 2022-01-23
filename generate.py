@@ -138,7 +138,7 @@ def main(name, time):
         "wav_out_path": name,
         "logdir": 'logging',
         "samples": time*16000,
-        "checkpoint": 'logging/train_new/model.ckpt-100000',
+        "checkpoint": 'logging/6HourDataTrainModels/model.ckpt-100000',
         "temperature": 1.0,
         "wavenet_params": './wavenet_params.json',
         "silence_threshold": 0.1,
@@ -293,4 +293,4 @@ def main(name, time):
 
 if __name__ == '__main__':
     print("THIS IS A SANITY CHECK TO GENERATE ONE SECOND OF AUDIO FROM SPECIFIC MODEL")
-    main('generated.wav', 1)
+    main('100k step @ 6 hours data (1 min).wav', 55)

@@ -1,5 +1,5 @@
 from concurrent.futures import thread
-from flask import Flask, render_template, request, flash
+from flask import Flask, render_template, request, flash, send_file, send_from_directory
 import os
 from generate import main as model_generate
 from threading import Thread
@@ -31,3 +31,7 @@ def fame():
 	for path in wavPaths:
 		wavs.append({"name": path.replace(".wav", ''), "path":path})
 	return render_template("hall.html", wavs=wavs)
+
+@app.route('/docs', methods=['GET'])
+def docs():
+	return send_from_directory(app.config['/static'], 'documentation.pdf')
