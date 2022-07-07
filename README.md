@@ -1,4 +1,5 @@
 # DeepNote
+### XXXXX Deprecated XXXXX
 A collection of all findings during my research for auto-regressive generative model for music generation
 
 ## Data
